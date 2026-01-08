@@ -1,17 +1,30 @@
 package com.petruboulescu.web;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.petruboulescu.context.ApplicationConfiguration;
 import com.petruboulescu.model.Transaction;
+import com.petruboulescu.service.TransactionService;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.io.IOException;
 import java.util.List;
 
-import static com.petruboulescu.Application.objectMapper;
-import static com.petruboulescu.Application.transactionService;
-
 public class BankingServlet extends HttpServlet {
+
+    private TransactionService transactionService;
+    private ObjectMapper objectMapper = new ObjectMapper();
+
+    @Override
+    public void init() {
+        AnnotationConfigApplicationContext applicationContext =
+                new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
+        transactionService = applicationContext.getBean(TransactionService.class);
+        objectMapper = applicationContext.getBean(ObjectMapper.class);
+
+    }
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {

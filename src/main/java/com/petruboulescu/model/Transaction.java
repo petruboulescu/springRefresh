@@ -10,6 +10,7 @@ public class Transaction {
     private String id;
     private int amount;
     private String reference;
+    private String slogan;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mmZ")
     private ZonedDateTime timestamp;
@@ -17,11 +18,12 @@ public class Transaction {
     public Transaction() {
     }
 
-    public Transaction(int amount, String reference, ZonedDateTime timestamp) {
+    public Transaction(int amount, String reference, ZonedDateTime timestamp, String slogan) {
         this.id = UUID.randomUUID().toString();
         this.amount = amount;
         this.reference = reference;
         this.timestamp = timestamp;
+        this.slogan = slogan;
     }
 
     public String getId() {
@@ -54,5 +56,13 @@ public class Transaction {
 
     public void setTimestamp(ZonedDateTime timestamp) {
         this.timestamp = timestamp;
+    }
+
+    public String getSlogan() {
+        return slogan;
+    }
+
+    public void setSlogan(String slogan) {
+        this.slogan = slogan;
     }
 }
