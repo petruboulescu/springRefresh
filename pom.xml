@@ -12,13 +12,21 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <datetime.version>2.20.0</datetime.version>
+        <tomcat.version>11.0.12</tomcat.version>
+        <maven.compiler.version>3.10.1</maven.compiler.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-core</artifactId>
-            <version>11.0.12</version>
+            <version>${tomcat.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>${datetime.version}</version>
         </dependency>
     </dependencies>
 
@@ -27,7 +35,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.10.1</version>
+                <version>${maven.compiler.version}</version>
                 <configuration>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>

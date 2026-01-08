@@ -1,0 +1,11 @@
+POST http://localhost:8080/transactions?amount=100&reference=eating out
+Accept: application/json
+###
+
+POST http://localhost:8080/transactions?amount=1000&reference=getting java classes
+Accept: application/json
+####
+#
+GET http://localhost:8080/transactions
+Accept: application/json
+####
