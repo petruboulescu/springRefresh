@@ -1,11 +1,25 @@
-POST http://localhost:8080/transactions?amount=100&reference=eating out
+POST http://localhost:8080/transactions
 Accept: application/json
+Content-Type: application/json
+
+{   "amount": 1000, "reference" : "eating out"}
 ###
 
-POST http://localhost:8080/transactions?amount=1000&reference=getting java classes
+POST http://localhost:8080/transactions
 Accept: application/json
+Content-Type: application/json
+
+{   "amount": 10000, "reference" : "Java classes"}
 ####
-#
+
+#### Used for validation testing
+POST http://localhost:8080/transactions
+Accept: application/json
+Content-Type: application/json
+
+{   "amount": 10000, "reference" : ""}
+
+####
 GET http://localhost:8080/transactions
 Accept: application/json
 ####
