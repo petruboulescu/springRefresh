@@ -16,6 +16,8 @@
         <tomcat.version>11.0.12</tomcat.version>
         <maven.compiler.version>3.10.1</maven.compiler.version>
         <spring.version>7.0.2</spring.version>
+        <hibernate.version>9.0.0.Final</hibernate.version>
+        <expressly.version>6.0.0</expressly.version>
     </properties>
 
     <dependencies>
@@ -33,6 +35,21 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.expressly</groupId>
+            <artifactId>expressly</artifactId>
+            <version>${expressly.version}</version>
         </dependency>
     </dependencies>
 
