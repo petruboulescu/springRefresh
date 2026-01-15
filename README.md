@@ -10,7 +10,8 @@ Steps:
 
 1. Create an "old school" web app with an embedded Tomcat - available at release/v1-basic-servlet-webapp
    https://github.com/petruboulescu/springRefresh/tree/release/v1-basic-servlet-webapp
-2. Move to Spring (not Spring Boot)
+2. Move to Spring (not Spring Boot) - available at release/v2-spring-webapp
+   https://github.com/petruboulescu/springRefresh/tree/release/v2-spring-webapp
 3. Add database functionality
 4. Move to Spring Boot
 5. Move to Spring Data
